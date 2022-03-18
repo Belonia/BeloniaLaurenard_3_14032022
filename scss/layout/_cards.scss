@@ -1,0 +1,40 @@
+// CARDS DES RESTAURANTS  //
+.restaurants__card {
+  margin: 0 20px 20px 20px;
+  border-radius: 15px;
+  position: relative;
+  background-color: white;
+  @include box-shadow;
+  &__img {
+    img {
+      width: 100%;
+      height: 170px;
+      border-radius: 15px 15px 0 0;
+      object-fit: cover;
+    }
+    &__new {
+      font-size: 15px;
+      font-weight: 500;
+      position: absolute;
+      z-index: 1;
+      right: 30px;
+      top: 25px;
+      padding: 5px;
+      background-color: #99e2d0;
+      color: rgb(7, 94, 7);
+      border-radius: 3px;
+    }
+  }
+  &__container {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  i {
+    font-size: 20px;
+    margin-top: 14px;
+    position: absolute;
+    right: 10%;
+  }
+}
+// FIN CARDS DES RESTAURANTS  //
