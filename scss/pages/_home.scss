@@ -1,9 +1,9 @@
-.header__title {
-  font-family: "Shrikhand", cursive;
-  font-size: 33px;
-  text-align: center;
-  padding: 15px 0;
-}
+// .header__title {
+//   font-family: "Shrikhand", cursive;
+//   font-size: 33px;
+//   text-align: center;
+//   padding: 15px 0;
+// }
 // LOCATION //
 .location {
   font-size: 18px;
@@ -43,8 +43,8 @@
       @include box-shadow;
       background: linear-gradient(
         to bottom right,
-        $colorsecondary,
-        $colorprimary
+        $colorSecondary,
+        $colorPrimary
       );
     }
   }
@@ -75,9 +75,9 @@
     position: relative;
     transition: background 250ms;
     &:hover {
-      background: lighten($colorprimary, 35);
+      background: lighten($colorPrimary, 35);
       i {
-        color: $colorprimary;
+        color: $colorPrimary;
       }
     }
 
@@ -88,9 +88,9 @@
     &__number {
       font-size: 14px;
       color: white;
-      border: 1px solid $colorprimary;
+      border: 1px solid $colorPrimary;
       border-radius: 15px;
-      background: $colorprimary;
+      background: $colorPrimary;
       padding: 4px 7px;
       position: absolute;
       left: -9px;

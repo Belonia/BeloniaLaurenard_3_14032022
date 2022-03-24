@@ -213,6 +213,26 @@ h3 {
   opacity: 1;
 }
 
+.main__start .fa-solid {
+  color: transparent;
+  background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  cursor: pointer;
+  opacity: 0;
+  transition: 200ms;
+}
+.main__start .fa-solid:hover {
+  opacity: 1;
+}
+
+.header__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 33px;
+  text-align: center;
+  padding: 15px 0;
+}
+
 .restaurants__card {
   margin: 0 20px 20px 20px;
   border-radius: 15px;
@@ -231,8 +251,8 @@ h3 {
   font-weight: 500;
   position: absolute;
   z-index: 1;
-  right: 30px;
-  top: 25px;
+  right: 15px;
+  top: 15px;
   padding: 5px;
   background-color: #99e2d0;
   color: #075e07;
@@ -274,13 +294,6 @@ h3 {
 .footer p a {
   text-decoration: none;
   color: inherit;
-}
-
-.header__title {
-  font-family: "Shrikhand", cursive;
-  font-size: 33px;
-  text-align: center;
-  padding: 15px 0;
 }
 
 .location {
@@ -378,6 +391,108 @@ h3 {
   font-size: 25px;
   font-weight: 500;
   padding: 45px 0 20px 15px;
+}
+
+.image__restaurant img {
+  width: 100%;
+}
+
+.fa-arrow-left {
+  font-size: 20px;
+  position: absolute;
+  top: 22px;
+  left: 20px;
+}
+
+.main {
+  background: #f6f6f6;
+  position: relative;
+  top: -50px;
+  z-index: 30;
+  border-radius: 40px 40px 0 0;
+}
+
+.main__start {
+  display: flex;
+  position: relative;
+}
+.main__start i {
+  position: absolute;
+  top: 27px;
+  right: 30px;
+  font-size: 30px;
+}
+
+.main__start__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  padding: 30px 0 0 20px;
+}
+
+.foods__group {
+  padding: 45px 0 0 15px;
+}
+
+.foods__title__epd {
+  font-size: 24px;
+  font-weight: 100;
+  padding-bottom: 2px;
+  margin-bottom: 15px;
+  width: 50px;
+  border-bottom: 3px solid #99e2d0;
+}
+
+.foods__card {
+  border: none;
+  background: white;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #b6b4b4;
+}
+.foods__card__container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.foods__card__container__text {
+  padding-left: 10px;
+  width: 100%;
+  text-overflow: "...";
+  overflow: hidden;
+  white-space: nowrap;
+}
+.foods__card__container__price {
+  font-weight: bold;
+  margin: 15px 15px 0 auto;
+  padding: 5px;
+}
+.foods__card__container__icon {
+  color: #99e2d0;
+  background: #99e2d0;
+  padding: 20px;
+  border-radius: 0 15px 15px 0px;
+  margin-right: -64px;
+  transition: all 700ms;
+}
+.foods__card__container__icon i {
+  padding: 5px;
+  background: white;
+  border-radius: 15px;
+}
+.foods__card:hover .foods__card__container__icon {
+  margin-right: 0px;
+}
+.foods__card:hover .foods__card__container__icon i {
+  transform: rotate(360deg);
+  transition: transform 700ms;
+}
+
+.name__menu,
+.info__menu {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /*# sourceMappingURL=index.css.map */
