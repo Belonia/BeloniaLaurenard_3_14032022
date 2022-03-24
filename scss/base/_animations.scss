@@ -9,8 +9,8 @@
 
   .loader__animation {
     border: 10px solid #f3f3f3;
-    border-top: 10px solid #9356dc;
-    border-bottom: 10px solid #ff79da;
+    border-top: 10px solid $colorPrimary;
+    border-bottom: 10px solid $colorSecondary;
     border-radius: 50%;
     width: 70px;
     height: 70px;
