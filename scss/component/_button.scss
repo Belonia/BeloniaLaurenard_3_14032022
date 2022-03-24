@@ -5,8 +5,8 @@
     transform: scale(1.02);
     background: linear-gradient(
       to bottom right,
-      lighten($colorsecondary, 2%),
-      lighten($colorprimary, 2%)
+      lighten($colorSecondary, 2%),
+      lighten($colorPrimary, 2%)
     );
     box-shadow: 0px 0px 10px rgb(160, 159, 159);
   }
@@ -17,7 +17,21 @@
 .restaurants__card__container__button {
   .fa-solid {
     color: transparent;
-    background: linear-gradient($colorprimary, $colorsecondary);
+    background: linear-gradient($colorPrimary, $colorSecondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    cursor: pointer;
+    opacity: 0;
+    transition: 200ms;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.main__start {
+  .fa-solid {
+    color: transparent;
+    background: linear-gradient($colorPrimary, $colorSecondary);
     background-clip: text;
     -webkit-background-clip: text;
     cursor: pointer;
