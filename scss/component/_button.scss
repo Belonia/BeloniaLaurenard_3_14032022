@@ -1,5 +1,16 @@
 // boutton "Explorer nos restaurants"
-.intro__block__button {
+.button {
+  font-size: 17px;
+  color: white;
+  @include paddingbutton(40px);
+  margin: 0;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  @include box-shadow;
+  background: linear-gradient(to bottom right, $colorSecondary, $colorPrimary);
+}
+.button {
   transition: transform 400ms;
   &:hover {
     transform: scale(1.02);
