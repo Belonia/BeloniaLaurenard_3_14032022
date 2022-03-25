@@ -1,10 +1,5 @@
-// .header__title {
-//   font-family: "Shrikhand", cursive;
-//   font-size: 33px;
-//   text-align: center;
-//   padding: 15px 0;
-// }
 // LOCATION //
+
 .location {
   font-size: 18px;
   font-weight: 400;
@@ -13,6 +8,7 @@
   padding: 15px 0;
   border-top: 2px solid rgb(209, 207, 207);
   background-color: rgb(235, 235, 235);
+
   &__text {
     padding: 0 15px;
   }
@@ -20,9 +16,13 @@
 // INTRODUCTION //
 .intro {
   @include bglightgray;
+
   &__block {
     padding: 0px 0 40px 0;
     text-align: center;
+    @media screen and (min-width: 768px) {
+      padding: 40px 0 70px 0;
+    }
     &__first {
       margin: 0;
       padding: 30px 50px 20px 50px;
@@ -32,23 +32,9 @@
     &__second {
       padding: 0 10px 30px 10px;
     }
-    &__button {
-      font-size: 17px;
-      color: white;
-      padding: 15px;
-      margin: 0;
-      border-radius: 25px;
-      border: none;
-      cursor: pointer;
-      @include box-shadow;
-      background: linear-gradient(
-        to bottom right,
-        $colorSecondary,
-        $colorPrimary
-      );
-    }
   }
 }
+
 // FIN INTRODUCTION //
 
 // Section "Fonctionnement"//
@@ -112,3 +98,46 @@
 }
 
 // FIN section "Restaurants"//
+@media screen and (min-width: 768px) {
+  .location__text {
+    font-size: 25px;
+  }
+  .intro {
+    background: url("https://cdn.pixabay.com/photo/2015/03/17/15/21/cafe-677895_1280.jpg")
+      center/cover;
+    &__block__first {
+      color: white;
+    }
+    &__block__second {
+      color: white;
+      font-weight: 400;
+      font-size: 20px;
+    }
+    &__block__button {
+      font-size: 19px;
+      margin-top: 20px;
+    }
+  }
+  .fonctionnement__title {
+    margin-bottom: 25px;
+  }
+  .fonctionnement__list {
+    text-align: center;
+    display: flex;
+  }
+  .fonctionnement__list__items {
+    width: 30%;
+    font-size: 22px;
+    margin: 0 25px 0 0;
+  }
+  .restaurants__card__group {
+    display: flex;
+  }
+  .restaurants__card {
+    width: 25%;
+    margin: 0 10px 10px 10px;
+  }
+  .footer {
+    text-align: center;
+  }
+}
