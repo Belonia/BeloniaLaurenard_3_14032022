@@ -1,9 +1,9 @@
-.image__restaurant {
-  img {
-    width: 100%;
+// HEADER
+header {
+  a {
+    color: inherit;
   }
 }
-// HEADER
 .fa-arrow-left {
   font-size: 20px;
   position: absolute;
@@ -12,11 +12,22 @@
 }
 // MAIN START
 .main {
-  @include bglightgray;
   position: relative;
-  top: -50px;
   z-index: 30;
+}
+.main__image__restaurant {
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+  }
+}
+.main__container {
+  @include bglightgray;
   border-radius: 40px 40px 0 0;
+  position: relative;
+  z-index: 90;
+  margin-top: -70px;
 }
 .main__start {
   display: flex;
@@ -34,24 +45,34 @@
   padding: 30px 0 0 20px;
 }
 // SECTION MENUS ENTREES
+
 .foods__group {
-  padding: 45px 0 0 15px;
+  padding: 0 0 30px 15px;
 }
+
 .foods__title__epd {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 100;
   padding-bottom: 2px;
   margin-bottom: 15px;
+  margin-top: 30px;
   width: 50px;
   border-bottom: 3px solid $colorTertiary;
 }
 .foods__card {
+  cursor: pointer;
   border: none;
   background: white;
-  margin-right: 15px;
-  margin-bottom: 15px;
+  margin: 15px 15px 0 0;
   border-radius: 15px;
   @include box-shadow;
+  animation: appear 800ms;
+  animation-fill-mode: backwards;
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      animation-delay: 200ms * $i;
+    }
+  }
   &__container {
     display: flex;
     align-items: center;
@@ -65,7 +86,7 @@
       white-space: nowrap;
     }
     &__price {
-      font-weight: bold;
+      font-weight: 400;
       margin: 15px 15px 0 auto;
       padding: 5px;
     }
@@ -96,4 +117,44 @@
 .info__menu {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.button__commander {
+  text-align: center;
+  padding-bottom: 45px;
+}
+
+@media screen and (min-width: 768px) {
+  .fa-arrow-left {
+    left: 150px;
+  }
+  .main__image__restaurant {
+    min-height: 40rem;
+    img {
+      object-fit: cover;
+      height: 950px;
+    }
+  }
+
+  .main__container {
+    border-radius: 40px 40px 0 0;
+    margin-top: -40rem;
+  }
+  .main__start i {
+    right: 50px;
+  }
+  .main__start__title {
+    margin: auto;
+  }
+
+  .foods__group {
+    padding-bottom: 25px;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  .foods__title__epd {
+    margin-left: 0;
+  }
+  .footer {
+    text-align: center;
+  }
 }
