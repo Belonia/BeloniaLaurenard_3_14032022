@@ -45,3 +45,16 @@
   }
 }
 // FIN ANIMATION LOADER //
+
+// animation apparition des plats
+
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
