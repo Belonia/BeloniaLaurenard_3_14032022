@@ -141,3 +141,19 @@
     text-align: center;
   }
 }
+@media screen and (max-width: 350px) {
+  .fonctionnement__list {
+    padding: 0 10px 0 14px;
+  }
+  .fonctionnement__list__items {
+    padding: 15px;
+    font-size: 17px;
+    border-radius: 18px;
+    &__number {
+      top: 13px;
+    }
+    i {
+      margin: 0 10px;
+    }
+  }
+}
