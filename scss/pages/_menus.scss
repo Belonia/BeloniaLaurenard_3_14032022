@@ -87,6 +87,9 @@ header {
     &__text {
       padding-left: 10px;
       width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     &__price {
       font-weight: 400;
