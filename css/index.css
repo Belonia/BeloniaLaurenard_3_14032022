@@ -533,6 +533,7 @@ header a {
 @media screen and (max-width: 350px) {
   .main__start i {
     font-size: 25px;
+    right: 20px;
   }
 }
 
@@ -544,6 +545,11 @@ header a {
 @media screen and (max-width: 350px) {
   .main__start__title {
     font-size: 25px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .main__start__title {
+    font-size: 22px;
   }
 }
 
@@ -595,6 +601,9 @@ header a {
 .foods__card__container__text {
   padding-left: 10px;
   width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .foods__card__container__price {
   font-weight: 400;
@@ -626,6 +635,7 @@ header a {
 .info__menu {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .button__commander {
