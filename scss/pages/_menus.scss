@@ -120,6 +120,7 @@ header {
 .info__menu {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .button__commander {
   text-align: center;
