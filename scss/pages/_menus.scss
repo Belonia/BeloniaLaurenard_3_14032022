@@ -4,54 +4,75 @@ header {
     color: inherit;
   }
 }
-.fa-arrow-left {
+.arrow__home {
   font-size: 20px;
   position: absolute;
   top: 22px;
   left: 20px;
 }
 // MAIN START
+.lne {
+  background-image: url(/Users/belonia/Documents/Docs_P3/images/large/lanoteenchantee.jpg);
+  @include bgImage;
+}
+.alf {
+  background-image: url(/Users/belonia/Documents/Docs_P3/images/large/alafrancaise.jpg);
+  @include bgImage;
+}
+.lds {
+  background-image: url(/Users/belonia/Documents/Docs_P3/images/large/ledelicedessens.jpg);
+  @include bgImage;
+}
+.lpg {
+  background-image: url(/Users/belonia/Documents/Docs_P3/images/large/lapalettedugout.jpg);
+  @include bgImage;
+}
 .main {
   position: relative;
   z-index: 30;
-}
-.main__image__restaurant {
-  img {
-    width: 100%;
-    object-fit: cover;
-    height: 300px;
+  padding-top: 11rem;
+  @media screen and (max-width: 280px) {
+    padding-top: 9rem;
   }
-}
-.main__container {
-  @include bglightgray;
-  border-radius: 40px 40px 0 0;
-  position: relative;
-  z-index: 90;
-  margin-top: -70px;
-}
-.main__start {
-  display: flex;
-  position: relative;
-  i {
-    position: absolute;
-    top: 27px;
-    right: 30px;
-    font-size: 30px;
-    @media screen and (max-width: 350px) {
-      font-size: 25px;
-      right: 20px;
+
+  &__image__restaurant {
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 300px;
     }
   }
-}
-.main__start__title {
-  font-family: "Shrikhand", cursive;
-  font-size: 30px;
-  padding: 30px 0 0 20px;
-  @media screen and (max-width: 350px) {
-    font-size: 25px;
+  &__container {
+    @include bgLightGray;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    z-index: 90;
+    // margin-top: -70px;
   }
-  @media screen and (max-width: 280px) {
-    font-size: 22px;
+  &__start {
+    display: flex;
+    position: relative;
+    i {
+      position: absolute;
+      top: 27px;
+      right: 30px;
+      font-size: 30px;
+      @media screen and (max-width: 350px) {
+        font-size: 25px;
+        right: 20px;
+      }
+    }
+  }
+  &__start__title {
+    font-family: "Shrikhand", cursive;
+    font-size: 29px;
+    padding: 30px 0 0 20px;
+    @media screen and (max-width: 350px) {
+      font-size: 25px;
+    }
+    @media screen and (max-width: 280px) {
+      font-size: 22px;
+    }
   }
 }
 // SECTION MENUS ENTREES
@@ -60,12 +81,11 @@ header {
   padding: 0 0 30px 15px;
 }
 
-.foods__title__epd {
+.foods__title {
   font-size: 20px;
   font-weight: 100;
   padding-bottom: 2px;
-  margin-bottom: 15px;
-  margin-top: 30px;
+  margin: 30px 0 15px 0;
   width: 50px;
   border-bottom: 3px solid $colorTertiary;
 }
@@ -75,7 +95,7 @@ header {
   background: white;
   margin: 15px 15px 0 0;
   border-radius: 15px;
-  @include box-shadow;
+  @include boxShadow;
   animation: appear 800ms;
   animation-fill-mode: backwards;
   @for $i from 1 through 5 {
@@ -115,7 +135,7 @@ header {
       }
     }
   }
-  &:hover .foods__card__container__icon {
+  &:hover &__container__icon {
     margin-right: 0px;
     i {
       transform: rotate(360deg);
@@ -135,26 +155,35 @@ header {
 }
 
 @media screen and (min-width: 768px) {
-  .fa-arrow-left {
+  .arrow__home {
     left: 150px;
   }
-  .main__image__restaurant {
-    min-height: 40rem;
-    img {
-      object-fit: cover;
-      height: 950px;
-    }
+  .lne {
+    @include bgImage768(800px);
   }
 
-  .main__container {
-    border-radius: 40px 40px 0 0;
-    margin-top: -40rem;
+  .alf {
+    @include bgImage768;
   }
-  .main__start i {
-    right: 50px;
+
+  .lds {
+    @include bgImage768(550px);
   }
-  .main__start__title {
-    margin: auto;
+
+  .lpg {
+    @include bgImage768;
+  }
+  .main {
+    padding-top: 15rem;
+    &__container {
+      border-radius: 40px 40px 0 0;
+    }
+    &__start i {
+      right: 50px;
+    }
+    &__start__title {
+      margin: auto;
+    }
   }
 
   .foods__group {
@@ -162,7 +191,7 @@ header {
     padding-left: 20%;
     padding-right: 20%;
   }
-  .foods__title__epd {
+  .foods__title {
     margin-left: 0;
   }
   .footer {

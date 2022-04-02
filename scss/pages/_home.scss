@@ -8,14 +8,16 @@
   padding: 15px 0;
   border-top: 2px solid rgb(209, 207, 207);
   background-color: rgb(235, 235, 235);
-
+  &__icone {
+    vertical-align: text-top;
+  }
   &__text {
     padding: 0 15px;
   }
 }
 // INTRODUCTION //
 .intro {
-  @include bglightgray;
+  @include bgLightGray;
 
   &__block {
     padding: 0px 0 40px 0;
@@ -52,10 +54,10 @@
   &__list__items {
     font-size: 19px;
     font-weight: 500;
-    @include bglightgray;
+    @include bgLightGray;
     border: none;
     border-radius: 25px;
-    @include box-shadow;
+    @include boxShadow;
     padding: 25px 15px;
     margin-bottom: 25px;
     position: relative;
@@ -88,7 +90,7 @@
 
 // Section "Restaurants"//
 .restaurants {
-  @include bglightgray;
+  @include bgLightGray;
   padding-bottom: 40px;
   &__title {
     font-size: 25px;
@@ -118,24 +120,26 @@
       margin-top: 20px;
     }
   }
-  .fonctionnement__title {
-    margin-bottom: 25px;
-  }
-  .fonctionnement__list {
-    text-align: center;
-    display: flex;
-  }
-  .fonctionnement__list__items {
-    width: 30%;
-    font-size: 22px;
-    margin: 0 25px 0 0;
+  .fonctionnement {
+    &__title {
+      margin-bottom: 25px;
+    }
+    &__list {
+      text-align: center;
+      display: flex;
+      &__items {
+        width: 30%;
+        font-size: 22px;
+        margin: 0 25px 0 0;
+      }
+    }
   }
   .restaurants__card__group {
     display: flex;
   }
   .restaurants__card {
     width: 25%;
-    margin: 0 10px 10px 10px;
+    margin: 0 5px;
   }
   .footer {
     text-align: center;
@@ -144,16 +148,16 @@
 @media screen and (max-width: 350px) {
   .fonctionnement__list {
     padding: 0 10px 0 14px;
-  }
-  .fonctionnement__list__items {
-    padding: 15px;
-    font-size: 17px;
-    border-radius: 18px;
-    &__number {
-      top: 13px;
-    }
-    i {
-      margin: 0 10px;
+    &__items {
+      padding: 15px;
+      font-size: 17px;
+      border-radius: 18px;
+      &__number {
+        top: 13px;
+      }
+      i {
+        margin: 0 10px;
+      }
     }
   }
 }
