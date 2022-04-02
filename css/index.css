@@ -220,7 +220,7 @@ h3 {
   box-shadow: 0px 0px 10px #a09f9f;
 }
 
-.restaurants__card__container__button .fa-solid {
+.restaurants__card__container__button .heart--full {
   color: transparent;
   background: linear-gradient(#9356dc, #ff79da);
   background-clip: text;
@@ -229,11 +229,11 @@ h3 {
   opacity: 0;
   transition: 200ms;
 }
-.restaurants__card__container__button .fa-solid:hover {
+.restaurants__card__container__button .heart--full:hover {
   opacity: 1;
 }
 
-.main__start .fa-solid {
+.main__start .heart--full {
   color: transparent;
   background: linear-gradient(#9356dc, #ff79da);
   background-clip: text;
@@ -242,7 +242,7 @@ h3 {
   opacity: 0;
   transition: 200ms;
 }
-.main__start .fa-solid:hover {
+.main__start .heart--full:hover {
   opacity: 1;
 }
 
@@ -302,6 +302,11 @@ header {
   position: absolute;
   right: 10%;
 }
+@media screen and (min-width: 768px) and (max-width: 890px) {
+  .restaurants__card i {
+    margin-top: 19px;
+  }
+}
 .restaurants__card a {
   text-decoration: none;
   color: inherit;
@@ -341,6 +346,9 @@ header {
   padding: 15px 0;
   border-top: 2px solid #d1cfcf;
   background-color: #ebebeb;
+}
+.location__icone {
+  vertical-align: text-top;
 }
 .location__text {
   padding: 0 15px;
@@ -448,12 +456,10 @@ header {
   .fonctionnement__title {
     margin-bottom: 25px;
   }
-
   .fonctionnement__list {
     text-align: center;
     display: flex;
   }
-
   .fonctionnement__list__items {
     width: 30%;
     font-size: 22px;
@@ -466,7 +472,7 @@ header {
 
   .restaurants__card {
     width: 25%;
-    margin: 0 10px 10px 10px;
+    margin: 0 5px;
   }
 
   .footer {
@@ -477,7 +483,6 @@ header {
   .fonctionnement__list {
     padding: 0 10px 0 14px;
   }
-
   .fonctionnement__list__items {
     padding: 15px;
     font-size: 17px;
@@ -494,32 +499,58 @@ header a {
   color: inherit;
 }
 
-.fa-arrow-left {
+.arrow__home {
   font-size: 20px;
   position: absolute;
   top: 22px;
   left: 20px;
 }
 
+.lne {
+  background-image: url(/Users/belonia/Documents/Docs_P3/images/large/lanoteenchantee.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.alf {
+  background-image: url(/Users/belonia/Documents/Docs_P3/images/large/alafrancaise.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.lds {
+  background-image: url(/Users/belonia/Documents/Docs_P3/images/large/ledelicedessens.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.lpg {
+  background-image: url(/Users/belonia/Documents/Docs_P3/images/large/lapalettedugout.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 .main {
   position: relative;
   z-index: 30;
+  padding-top: 11rem;
 }
-
+@media screen and (max-width: 280px) {
+  .main {
+    padding-top: 9rem;
+  }
+}
 .main__image__restaurant img {
   width: 100%;
   object-fit: cover;
   height: 300px;
 }
-
 .main__container {
   background: #f6f6f6;
   border-radius: 40px 40px 0 0;
   position: relative;
   z-index: 90;
-  margin-top: -70px;
 }
-
 .main__start {
   display: flex;
   position: relative;
@@ -536,10 +567,9 @@ header a {
     right: 20px;
   }
 }
-
 .main__start__title {
   font-family: "Shrikhand", cursive;
-  font-size: 30px;
+  font-size: 29px;
   padding: 30px 0 0 20px;
 }
 @media screen and (max-width: 350px) {
@@ -557,12 +587,11 @@ header a {
   padding: 0 0 30px 15px;
 }
 
-.foods__title__epd {
+.foods__title {
   font-size: 20px;
   font-weight: 100;
   padding-bottom: 2px;
-  margin-bottom: 15px;
-  margin-top: 30px;
+  margin: 30px 0 15px 0;
   width: 50px;
   border-bottom: 3px solid #99e2d0;
 }
@@ -644,27 +673,39 @@ header a {
 }
 
 @media screen and (min-width: 768px) {
-  .fa-arrow-left {
+  .arrow__home {
     left: 150px;
   }
 
-  .main__image__restaurant {
-    min-height: 40rem;
-  }
-  .main__image__restaurant img {
-    object-fit: cover;
-    height: 950px;
+  .lne {
+    background-size: 100% 800px;
+    background-attachment: fixed;
   }
 
+  .alf {
+    background-size: 100% 430px;
+    background-attachment: fixed;
+  }
+
+  .lds {
+    background-size: 100% 550px;
+    background-attachment: fixed;
+  }
+
+  .lpg {
+    background-size: 100% 430px;
+    background-attachment: fixed;
+  }
+
+  .main {
+    padding-top: 15rem;
+  }
   .main__container {
     border-radius: 40px 40px 0 0;
-    margin-top: -40rem;
   }
-
   .main__start i {
     right: 50px;
   }
-
   .main__start__title {
     margin: auto;
   }
@@ -675,7 +716,7 @@ header a {
     padding-right: 20%;
   }
 
-  .foods__title__epd {
+  .foods__title {
     margin-left: 0;
   }
 
