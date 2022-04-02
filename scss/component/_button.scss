@@ -1,13 +1,13 @@
-// boutton "Explorer nos restaurants"
+// boutton "Explorer nos restaurants et commander"
 .button {
   font-size: 17px;
   color: white;
-  @include paddingbutton(40px);
+  @include paddingButton(40px);
   margin: 0;
   border-radius: 25px;
   border: none;
   cursor: pointer;
-  @include box-shadow;
+  @include boxShadow;
   background: linear-gradient(to bottom right, $colorSecondary, $colorPrimary);
 }
 .button {
@@ -22,11 +22,11 @@
     box-shadow: 0px 0px 10px rgb(160, 159, 159);
   }
 }
-// FIN bouton "Explorez nos restaurants"
+// FIN bouton "Explorez nos restaurants et commander"
 
 // bouton icone coeur "j'aime" //
 .restaurants__card__container__button {
-  .fa-solid {
+  .heart--full {
     color: transparent;
     background: linear-gradient($colorPrimary, $colorSecondary);
     background-clip: text;
@@ -40,7 +40,7 @@
   }
 }
 .main__start {
-  .fa-solid {
+  .heart--full {
     color: transparent;
     background: linear-gradient($colorPrimary, $colorSecondary);
     background-clip: text;

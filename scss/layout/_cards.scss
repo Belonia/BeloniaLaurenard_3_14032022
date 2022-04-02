@@ -4,7 +4,7 @@
   border-radius: 15px;
   position: relative;
   background-color: white;
-  @include box-shadow;
+  @include boxShadow;
   &:hover {
     box-shadow: 0px 0px 10px rgb(160, 159, 159);
   }
@@ -41,6 +41,9 @@
     margin-top: 14px;
     position: absolute;
     right: 10%;
+    @media screen and (min-width: 768px) and (max-width: 890px) {
+      margin-top: 19px;
+    }
   }
   a {
     text-decoration: none;
