@@ -55,3 +55,12 @@
     opacity: 1;
   }
 }
+.foods__card {
+  animation: appear 800ms;
+  animation-fill-mode: backwards;
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      animation-delay: 200ms * $i;
+    }
+  }
+}

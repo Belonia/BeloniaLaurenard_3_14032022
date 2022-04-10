@@ -199,6 +199,26 @@ h3 {
     opacity: 1;
   }
 }
+.foods__card {
+  animation: appear 800ms;
+  animation-fill-mode: backwards;
+}
+.foods__card:nth-child(1) {
+  animation-delay: 200ms;
+}
+.foods__card:nth-child(2) {
+  animation-delay: 400ms;
+}
+.foods__card:nth-child(3) {
+  animation-delay: 600ms;
+}
+.foods__card:nth-child(4) {
+  animation-delay: 800ms;
+}
+.foods__card:nth-child(5) {
+  animation-delay: 1000ms;
+}
+
 .button {
   font-size: 17px;
   color: white;
@@ -603,23 +623,6 @@ header a {
   margin: 15px 15px 0 0;
   border-radius: 15px;
   box-shadow: 0px 0px 10px #b6b4b4;
-  animation: appear 800ms;
-  animation-fill-mode: backwards;
-}
-.foods__card:nth-child(1) {
-  animation-delay: 200ms;
-}
-.foods__card:nth-child(2) {
-  animation-delay: 400ms;
-}
-.foods__card:nth-child(3) {
-  animation-delay: 600ms;
-}
-.foods__card:nth-child(4) {
-  animation-delay: 800ms;
-}
-.foods__card:nth-child(5) {
-  animation-delay: 1000ms;
 }
 .foods__card__container {
   display: flex;

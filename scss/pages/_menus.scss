@@ -96,13 +96,7 @@ header {
   margin: 15px 15px 0 0;
   border-radius: 15px;
   @include boxShadow;
-  animation: appear 800ms;
-  animation-fill-mode: backwards;
-  @for $i from 1 through 5 {
-    &:nth-child(#{$i}) {
-      animation-delay: 200ms * $i;
-    }
-  }
+
   &__container {
     display: flex;
     align-items: center;
